@@ -434,6 +434,14 @@ class HreflangTags {
 				'domainName' => $domainName,
 				'additionalGetParameters' => $countryMapping['additionalGetParameters'][0],
 			);
+			if ($rootPageId == $defaultCountryId) {
+				$this->hreflangAttributes[($countryMapping['languageMapping'][0])] = array(
+					'sysLanguageUid' => 0,
+					'mountPoint' => $mountPoint,
+					'domainName' => $domainName,
+					'additionalGetParameters' => $countryMapping['additionalGetParameters'][0],
+				);
+			}
 		}
 
 		if(version_compare(TYPO3_branch, '9.0', '<')){
